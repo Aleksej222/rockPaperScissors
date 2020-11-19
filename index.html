@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Rock Paper Scissors</title>
+<meta charset="UTF-8"/>
+</head>
+
+<body>
+<script>
+
+    function playerChoice(player_choice)
+        {
+            player_choice = ["rock" , "paper", "scissors"];
+            while (["rock", "paper", "scissors"].indexOf(player_choice) === -1)
+            {
+                player_choice = prompt("Please choose: rock, paper, scissors").toLowerCase();
+                
+                if (["rock", "paper", "scissors"].indexOf(player_choice) === -1)
+                {
+                    console.log("That's an incorrect choice, please try again.");
+                }
+            }
+
+            return player_choice;
+        }
+
+    function computerChoice(computer_choice)
+        {
+            const choices = ["rock", "paper", "scissors"];
+            computer_choice = choices[Math.floor(Math.random() * choices.length)];
+            return computer_choice;
+        }
+
+    function playRound(player_choice, computer_choice)
+    { 
+      
+        player_choice = playerChoice();
+        computer_choice = computerChoice();
+        console.log("You chose " + player_choice + " and computer chose " + computer_choice);
+
+    if (player_choice === computer_choice)
+    {
+        return "It's  a tie!" + player_score + " : " +computer_score;
+    } 
+    else if(player_choice == "rock" && computer_choice == "scissors")
+    {
+        player_score++;
+        return "The score is " + player_score + " : " +computer_score
+    }
+    else if(player_choice == "paper" && computer_choice == "rock")
+    {
+        player_score++;
+        return "The score is " + player_score + " : " +computer_score
+    }
+    else if(player_choice == "scissors" && computer_choice == "paper")
+    {
+        player_score++;     
+        return "The score is " + player_score + " : " +computer_score
+    }
+    else{
+        computer_score++;
+        return "The score is " + player_score + " : " +computer_score
+    }   
+
+    }
+
+    function game()
+    {
+     
+     for(let i=1; i<=5; i++)
+     {
+         playRound();
+         console.log("The current score is: " + player_score + " : " + computer_score);
+     }
+     if(player_score > computer_score)
+     {
+         return "You won! " + player_score + " : " + computer_score;
+     }
+     else if (player_score < computer_score) {
+         return "You lost! " + player_score + " : " + computer_score;
+     }
+     else {
+         return "It's a tie! " + player_score + " : " + computer_score;
+     }
+
+    }
+    let player_score = 0;
+    let computer_score = 0;
+
+    console.log(game());
+
+</script>
+
+</body>
+</html>
