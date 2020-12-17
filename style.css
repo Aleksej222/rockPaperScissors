@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;  
+    font-family: 'Nerko One', cursive;
+}
+
+#container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: moccasin;
+    font-size: 38px;
+}
+
+#choices {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 40px;
+    color: moccasin;
+}
+
+img {
+ width:280px;
+ height: 350px;
+}
+
+img:hover
+{
+    transform: scale(1.2,1.2);
+    border: 5px solid moccasin;
+}
+
+.score {
+    color: moccasin;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 26px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
