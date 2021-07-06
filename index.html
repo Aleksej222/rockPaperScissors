@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Rock Paper Scissors</title>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <h1 class="title">Choose your card</h1>
+  <div class="container">
+
+    <div class="cards" id="rock">
+      <img class="card-img rock-card" src="https://www.1999.co.jp/itbig13/10132801a.jpg" alt="image of a rock card">
+    </div>
+
+    <div class="cards" id="paper">
+      <img class="card-img paper-card" src="https://images-na.ssl-images-amazon.com/images/I/41BiWq6QbKL._AC_SY450_.jpg" alt="image of a paper card">
+    </div>
+
+    <div class="cards" id="scissors">
+      <img class="card-img scissors-card" src="https://www.1999.co.jp/itbig14/10142728a_m.jpg" alt="image of a scissors card">
+    </div>
+  </div>
+
+  <div class="container hidden player-won">
+    <h2>Congrats! You won!</h2>
+  </div>
+
+  <div class="container hidden computer-won">
+    <h2>Computer won :( Better luck next time!</h2>
+  </div>
+
+  <div class="container">
+    <div class="choice">
+      <span>Player score :</span>
+      <span id="player-result">0</span>
+      <span class="player-choice"></span>
+    </div>
+    <div class="choice">
+      <span>Computer score :</span>
+      <span id="computer-result">0</span>
+      <span class="computer-choice"></span>
+    </div>
+  </div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

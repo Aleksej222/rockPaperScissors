@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;  
+    font-family: 'Nerko One', cursive;
+}
+
+.title {
+    text-align: center;
+    color: moccasin;
+    font-size: 3rem;
+}
+
+.card-img {
+    width: 280px;
+    height: auto;
+}
+
+.card-img:hover {
+    transform: scale(1.2,1.2);
+    border: 5px solid moccasin;
+}
+
+.container {
+    margin-top: 5.5em;
+    display: flex;
+    justify-content: center;
+    gap: 9em;
+}
+
+.choice {
+    color: moccasin;
+    font-size: 2.3rem;
+    margin-top: 2.7em;
+}
+
+.player-choice, .computer-choice {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    color: moccasin;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.player-won {
+    display: none;
+}
+
+.computer-won {
+    display: none;
+}
+
+@media screen and (max-width: 1130px){
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .card-img {
+        width: 180px;
+        height: auto;
+    }
+
+    .choice {
+        font-size: 1.9rem;
+        margin-top: .7em;
+    }
+}
